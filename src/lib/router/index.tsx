@@ -1,11 +1,16 @@
-import { ReactElement } from "react";
+import { History } from 'history'
+import { ReactElement, ReactNode } from 'react'
 
-type RouterProps<T> = {
-  children: T;
-};
-
-export function Router<T extends ReactElement | ReactElement[]>({
-  children,
-}: RouterProps<T>): ReactElement {
-  return <div />;
+type RouterProps = {
+  history: History
+  children: ReactNode
 }
+
+export function Router({ history, children }: RouterProps): ReactElement {
+  return <div />
+}
+
+export * from './outlet'
+export * from './route'
+export * from './routes'
+export * from './link'
