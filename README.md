@@ -1,7 +1,7 @@
 # Router Exercise
 
 1. Using the Router, Routes, Route, and Link components, along with the
-   `history` library, create a router that allows a user to navigate between the
+   [`history`](https://github.com/remix-run/history/blob/3e9dab413f4eda8d6bce565388c5ddb7aeff9f7e/docs/getting-started.md) library, create a router that allows a user to navigate between the
    Home and About routes.
 2. Create a `useNavigate` hook that returns a `navigate` function that allows
    programmatic routing between the About and Home components.
