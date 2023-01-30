@@ -8,7 +8,7 @@ export function About() {
     <div>
       <h1>About</h1>
       <p>Location.pathname is: {location.pathname}</p>
-      <button type="button" onClick={() => navigate('/home')}>
+      <button type="button" onClick={() => navigate('/')}>
         Navigate
       </button>
     </div>
