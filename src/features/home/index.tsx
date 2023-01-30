@@ -1,3 +1,16 @@
+import { useLocation, useNavigate } from '~/lib/router/hooks'
+
 export function Home() {
-  return <h1>Home</h1>
+  const navigate = useNavigate()
+  const location = useLocation()
+
+  return (
+    <div>
+      <h1>Home</h1>
+      <p>Location.pathname is: {location.pathname}</p>
+      <button type="button" onClick={() => navigate('/about')}>
+        Navigate
+      </button>
+    </div>
+  )
 }
