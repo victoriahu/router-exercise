@@ -1,4 +1,4 @@
-import { useLocation, useNavigate } from '~/lib/router/hooks'
+import { useLocation, useNavigate } from '~/lib/router'
 
 export function Home() {
   const navigate = useNavigate()
