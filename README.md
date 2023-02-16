@@ -1,5 +1,9 @@
 # Router Exercise
 
+```
+yarn dev
+```
+
 1. Using the empty Router, Routes, Route, and Link components in `lib/router`,
    along with the
    [`history`](https://github.com/remix-run/history/blob/3e9dab413f4eda8d6bce565388c5ddb7aeff9f7e/docs/getting-started.md)
