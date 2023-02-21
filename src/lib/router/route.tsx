@@ -7,6 +7,7 @@ type RouteProps = {
   element: ReactElement
   index?: boolean
   children?: (typeof Route)[]
+  basename?: string
 }
 
 export function Route({
@@ -14,13 +15,20 @@ export function Route({
   element,
   index,
   children,
+  basename,
 }: RouteProps): ReactElement {
   // const route = useLocation()
   const { route } = React.useContext(RouterContext)
 
+  const pathWithBase = `${basename}${path}`
+
   useEffect(() => {
-    console.log('halp', route)
+    console.log('halp', route, pathWithBase)
   }, [route])
+
+  if (!!route.includes(pathWithBase)) {
+    return <></>
+  }
 
   if (route !== path) {
     return <></>

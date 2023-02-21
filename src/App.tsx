@@ -33,7 +33,7 @@ function App() {
         <Link to="/about">About</Link>
 
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home />} basename="/app" />
           <Route path="/about" element={<About />} />
         </Routes>
       </Router>
