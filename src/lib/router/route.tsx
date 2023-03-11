@@ -1,10 +1,13 @@
-import { ReactElement } from 'react'
+import React, { ReactElement, useEffect } from 'react'
+import { useLocation } from './hooks'
+import { RouterContext } from '../../App'
 
 type RouteProps = {
   path?: string
   element: ReactElement
   index?: boolean
   children?: (typeof Route)[]
+  basename?: string
 }
 
 export function Route({
@@ -12,6 +15,23 @@ export function Route({
   element,
   index,
   children,
+  basename,
 }: RouteProps): ReactElement {
-  return <div />
+  // const route = useLocation()
+  const { route } = React.useContext(RouterContext)
+
+  const pathWithBase = `${basename}${path}`
+
+  useEffect(() => {
+    console.log('halp', route, pathWithBase)
+  }, [route])
+
+  if (!!route.includes(pathWithBase)) {
+    return <></>
+  }
+
+  if (route !== path) {
+    return <></>
+  }
+  return <>{element}</>
 }

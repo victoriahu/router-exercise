@@ -5,5 +5,5 @@ type RoutesProps = {
 }
 
 export function Routes({ children }: RoutesProps): ReactElement {
-  return <div />
+  return <div>{children}</div>
 }
